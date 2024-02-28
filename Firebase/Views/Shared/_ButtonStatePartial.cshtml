@@ -1,0 +1,7 @@
+﻿@{
+    bool isButtonEnabled = (bool)ViewData["IsButtonEnabled"];
+}
+
+<button type="button" id="myButton" class="btn btn-@(isButtonEnabled ? "primary" : "secondary")" @(isButtonEnabled ? "" : "disabled")>
+    @(isButtonEnabled ? "Enabled Button" : "Disabled Button")
+</button>
